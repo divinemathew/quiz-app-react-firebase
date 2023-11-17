@@ -1,0 +1,45 @@
+/**
+ * @AssetLog.css
+ * @brief
+ *
+ * CSS File For AssetLog.js
+ *
+ * @props
+ *
+ *
+ *
+ *@return
+ *
+ *
+ *
+ * @note
+ *
+ * Revision History:
+ * 151022 - Creation Date - Divine A Mathew
+ *
+ *
+ */
+
+.table td {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 17px;
+  color: #40464c;
+}
+
+.my-custom-scroll {
+  position: relative;
+  height: 600px;
+  overflow: auto;
+}
+
+.asset-sub{
+  display: flex;
+  flex-direction: column;
+}
+
+.asset-sub div{
+  margin-bottom: 3%;
+}

@@ -1,0 +1,370 @@
+/**
+ * @MyAssets.css
+ * @brief
+ *
+ * CSS File For MyAssets.js
+ *
+ * @props
+ *
+ *
+ *
+ *@return
+ *
+ *
+ *
+ * @note
+ *
+ * Revision History:
+ * 151022 - Creation Date - Divine A Mathew
+ *
+ *
+ */
+
+@media (width<1920px) {
+  .table-container-holder {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 3%;
+    margin-right: 3%;
+    background: #f8f7f7;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    margin-bottom: 1.5%;
+  }
+
+  .table-header {
+    width: 100%;
+    margin-top: 1%;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .table-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .green {
+    background: #33b747;
+  }
+
+  .grape {
+    background: #836fb5;
+  }
+
+  .table button {
+    height: 5vh;
+    font-size: smaller;
+  }
+
+  .table {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+
+  .table-header h5 {
+    margin: 1%;
+    margin-left: 3.5%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: smaller;
+    color: #ffffff;
+  }
+  .pagination-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+  }
+
+  .table {
+    background-color: FBFBFB;
+  }
+
+  .asset-title {
+    text-decoration: none;
+    color: #40464c;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: x-small;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+
+  .asset-title a {
+    text-decoration: none;
+    color: #40464c;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: small;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+
+  .asset-sub {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: x-small;
+    color: #696c71;
+    margin-top: 2%;
+  }
+  .table img {
+    margin-right: 3%;
+    width: 15px;
+    height: 15px;
+  }
+
+  .table thead {
+    font-size: smaller;
+    color: #40464c;
+  }
+
+  .location-buttons {
+    margin-left: 40%;
+  }
+
+  .pagination-container li {
+    border-radius: 3px;
+  }
+
+  .my-custom-scroll {
+    position: relative;
+    height: 500px;
+    overflow: auto;
+  }
+
+  .paginationBttns {
+    height: 1vh;
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    margin-right: 1%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: smaller;
+    text-align: center;
+    color: #40464c;
+  }
+
+  .paginationBttns a {
+    padding: 5px;
+    margin-left: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #40464c;
+  }
+
+  .paginationBttns a:hover {
+    background-color: #2b2eff;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    color: white;
+  }
+
+  .paginationBttns li:hover {
+    color: white;
+  }
+
+  .paginationActive a {
+    background-color: #2b2eff;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .paginationActive {
+    color: #ffffff;
+  }
+
+  .paginationDisabled a {
+    display: none;
+  }
+}
+
+@media (width >=1920px) {
+  .table-container-holder {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 3%;
+    margin-right: 3%;
+    background: #f8f7f7;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    margin-bottom: 2%;
+  }
+
+  .table-header {
+    width: 100%;
+    margin-top: 2%;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .table-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .green {
+    background: #33b747;
+  }
+
+  .grape {
+    background: #836fb5;
+  }
+
+  .table button {
+    margin-right: 8%;
+  }
+  .table {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+
+  .table-header h5 {
+    margin: 1%;
+    margin-left: 3.5%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #ffffff;
+  }
+  .pagination-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+  }
+
+  .table tr {
+    height: 70px;
+  }
+
+  .table {
+    background-color: FBFBFB;
+  }
+
+  .asset-title {
+    text-decoration: none;
+    color: #40464c;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 19px;
+
+    align-self: stretch;
+    flex-grow: 0;
+  }
+
+  .asset-title a {
+    text-decoration: none;
+    color: #40464c;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 19px;
+
+    align-self: stretch;
+    flex-grow: 0;
+  }
+
+  .asset-sub {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 17px;
+    color: #696c71;
+    margin-top: 2%;
+  }
+  .table img {
+    margin-right: 3%;
+    width: 16px;
+    height: 16px;
+  }
+
+  .table thead {
+    font-weight: 500;
+    font-size: 16px;
+    color: #40464c;
+  }
+
+  .location-buttons {
+    margin-left: 40%;
+  }
+
+  .pagination-container li {
+    border-radius: 3px;
+  }
+
+  .my-custom-scroll {
+    position: relative;
+    height: 500px;
+    overflow: auto;
+  }
+
+  .paginationBttns {
+    height: 19px;
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    margin-right: 1%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #40464c;
+  }
+
+  .paginationBttns a {
+    padding: 10px;
+    margin-left: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #40464c;
+  }
+
+  .paginationBttns a:hover {
+    background-color: #2b2eff;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: white;
+  }
+
+  .paginationBttns li:hover {
+    color: white;
+  }
+
+  .paginationActive a {
+    background-color: #2b2eff;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #ffffff;
+  }
+
+  .paginationActive {
+    color: #ffffff;
+  }
+
+  .paginationDisabled a {
+    display: none;
+  }
+}

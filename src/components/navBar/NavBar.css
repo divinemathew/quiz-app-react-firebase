@@ -1,0 +1,177 @@
+@media (width <= 1366px) {
+  .App-header {
+    width: 100%;
+    height: 9vh;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 3%;
+    margin-top: 0.3%;
+  }
+
+  .header-title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-title a {
+    text-decoration: none;
+    color: #40464c;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 19px;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+
+  .header-title h4 {
+    font-weight: 800;
+  }
+
+  .header-title h6 {
+    font-weight: 600;
+    margin-top: -5%;
+  }
+
+  .banner img {
+    margin-top: 4%;
+    height: 40px;
+  }
+
+  .navbar-brand {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar-color {
+    background-color: #5f3bf1;
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.25);
+  }
+  .global-search {
+    border-radius: 7px;
+    width: 40%;
+    margin-top: 0.5%;
+    margin-bottom: 3%;
+    border-radius: 7px;
+  }
+  .alert {
+    height: 9vh;
+  }
+  .logout-button button {
+    width: 125px;
+    height: 40px;
+    margin-top: 3%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: #312f92;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+  .logout-button {
+    margin-top: 0.1%;
+    margin-right: 2%;
+  }
+
+  .logout-button img {
+    height: 100%;
+    margin-right: 6%;
+  }
+}
+
+@media (width >1366px) {
+  .App-header {
+    width: 100%;
+    height: 58px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 3%;
+    margin-top: 0.3%;
+  }
+
+  .header-title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-title a {
+    text-decoration: none;
+    color: #40464c;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 19px;
+
+    align-self: stretch;
+    flex-grow: 0;
+  }
+
+  .header-title h4 {
+    font-weight: 800;
+  }
+
+  .header-title h6 {
+    font-weight: 600;
+    margin-top: -5%;
+  }
+
+  .banner img {
+    margin-top: 4%;
+    height: 40px;
+  }
+
+  .navbar-brand {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar-color {
+    background-color: #5f3bf1;
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.25);
+  }
+  .global-search {
+    border-radius: 7px;
+    width: 40%;
+    margin-top: 0.5%;
+    margin-bottom: 3%;
+    border-radius: 7px;
+  }
+  .logout-button button {
+    width: 125px;
+    height: 40px;
+    margin-top: 3%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: #312f92;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+
+  .logout-button {
+    margin-top: 0.1%;
+    margin-right: 2%;
+  }
+
+  .logout-button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 6%;
+  }
+}

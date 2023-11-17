@@ -1,0 +1,117 @@
+/**
+ * @AssetDetails.css
+ * @brief
+ *
+ * CSS File For AssetDetails.js
+ *
+ * @props
+ *
+ *
+ *
+ *@return
+ *
+ *
+ *
+ * @note
+ *
+ * Revision History:
+ * 151022 - Creation Date - Divine A Mathew
+ *
+ *
+ */
+
+
+.content-holder {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 186.52%;
+  /* or 37px */
+  color: #3a3e42;
+}
+
+.title {
+  margin: 3%;
+}
+
+.sub-title input{
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 186.52%;
+  /* or 37px */
+  color: #3a3e42;
+  background-color: rgb(235, 235, 237);
+  border: 0px;
+  width: 70%;
+  border: 1;
+}
+.sub-title input:disabled {
+  background: #f8f7f7;
+  border: 0px;
+}
+.sub-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2%;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.buttons img {
+  width: 17px;
+  height: 17px;
+  margin-right: 10%;
+}
+.buttons button {
+  width: 130px;
+  margin-left:10px;
+  margin-top: -20%;
+  border-radius: 6px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.edit {
+  background: #7261a2;
+}
+.buttons button:hover{
+  background: #0DA2A9;
+}
+.save{
+  background: green;
+}
+
+
+
+.sub-title select{
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 186.52%;
+  /* or 37px */
+  color: #3a3e42;
+  background-color: rgb(235, 235, 237);
+  border: 0;
+  width: 70%;
+  border: 1;
+}
+
+.sub-title select:disabled {
+  background: #f8f7f7;
+}
+
+.buttons button:disabled{
+  display: none;
+}

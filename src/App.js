@@ -1,23 +1,40 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
 import './App.css';
+// import Login from './components/Login';
+// import SignUp from './components/SignUp';
+
+import Login from './pages/loginScreen/Login';
+import { db } from './firebase_config';
+
+
+import { collection, getDocs } from "firebase/firestore";
+import { ToastContainer } from 'react-toastify';
+
+
+
+
+
 
 function App() {
+  const userCollection = collection(db, "users");
+  useEffect(() => {
+    const getUsers = async () => {
+      const data = await getDocs(userCollection)
+      console.log(data);
+      const docsRef = data.docs.map((doc)=>({
+        ...doc.data(),id:doc.id
+      }))
+      console.log(docsRef);
+    }
+
+    getUsers();
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     {/* <SignUp></SignUp> */}
+      <Login></Login> 
+    {/* <Login></Login> */}
+    <ToastContainer />
     </div>
   );
 }
