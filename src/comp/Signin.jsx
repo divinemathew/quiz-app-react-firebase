@@ -17,17 +17,7 @@ export default function Signin() {
         setError('')
         try {
             await signIn(email, password)
-            toast.success(error.code, {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-            });
-            navigate('/account')
+            navigate('/dashboard')
         } catch (error) {
             setError(error.message);
             console.log(error.message);

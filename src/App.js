@@ -14,6 +14,7 @@ import Signin from './comp/Signin';
 import Signup from './comp/Signup';
 import { AuthContextProvider } from './context/AuthContext';
 import Account from './comp/Account';
+import Dashboard from './pages/dashBoard/DashBoard'
 import ProtectedRoute from './comp/ProtectedRoute';
 
 
@@ -44,7 +45,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Signin></Signin>}></Route>
             <Route path='/signup' element={<Signup></Signup>}></Route>
-            <Route path='/account' element={<ProtectedRoute><Account></Account></ProtectedRoute>}></Route>
+            <Route path='/dashboard' element={<ProtectedRoute><Dashboard></Dashboard></ProtectedRoute>}></Route>
           </Routes>
         </AuthContextProvider>
         <ToastContainer></ToastContainer>
