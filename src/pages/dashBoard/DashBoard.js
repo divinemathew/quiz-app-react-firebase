@@ -26,23 +26,33 @@ export default function Dashboard() {
 
     const updateScore = async (finalScore) => {
         const userRef = doc(db, 'users', currentUser.id)
-        await updateDoc(userRef,{
-            highscore:finalScore,
-            timeStamp:Timestamp.now()
+        await updateDoc(userRef, {
+            highscore: finalScore,
+            timeStamp: Timestamp.now()
         })
+        setScore(0);
+        setQuesIndex(0);
+        alert("Please Restart the Quiz");
+        window.location.reload()
     }
     const handleOptions = (e) => {
         console.log(e.isCorrect);
         if (quesIndex < (question.length - 1)) {
             setQuesIndex(quesIndex + 1)
+            if (e.isCorrect) {
+                setScore(score + 1);
+            }
+            else {
+                setScore(score - 1)
+            }
         } else {
-        }
-
-        if (e.isCorrect) {
-            setScore(score + 1);
-        }
-        else {
-            setScore(score - 1)
+            if (e.isCorrect) {
+                setScore(score + 1);
+            }
+            else {
+                setScore(score - 1)
+            }
+            updateScore(score);
         }
     }
 
@@ -95,9 +105,9 @@ export default function Dashboard() {
                         <button type="button" class="btn btn-primary" onClick={handleLogout}>LogOut</button>
                     </div>
                 </div>}
-            <div><input type="button" value="Click" onClick={() => updateScore(10)} /></div>
             <form>
                 <h1>Questions</h1>
+                <h1>Current User Marks={currentUser.highscore}</h1>
                 <h1>Marks = {score}</h1>
                 {question[0] && (
                     <div class="form-group">
