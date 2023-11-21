@@ -13,7 +13,98 @@ export default function Signup() {
     const [password, setPassword] = useState('')
     const [name, setName] = useState('')
     const [error, setError] = useState('')
-
+    var data = [
+        {
+          "question": "What is the capital of France?",
+          "options": [
+            {"option": "Paris", "isCorrect": true},
+            {"option": "London", "isCorrect": false},
+            {"option": "Berlin", "isCorrect": false},
+            {"option": "Madrid", "isCorrect": false}
+          ]
+        },
+        {
+          "question": "Who painted the Mona Lisa?",
+          "options": [
+            {"option": "Leonardo da Vinci", "isCorrect": true},
+            {"option": "Pablo Picasso", "isCorrect": false},
+            {"option": "Vincent van Gogh", "isCorrect": false},
+            {"option": "Michelangelo", "isCorrect": false}
+          ]
+        },
+        {
+          "question": "What is the largest planet in our solar system?",
+          "options": [
+            {"option": "Jupiter", "isCorrect": true},
+            {"option": "Saturn", "isCorrect": false},
+            {"option": "Neptune", "isCorrect": false},
+            {"option": "Mars", "isCorrect": false}
+          ]
+        },
+        {
+          "question": "Which language is used for web browsers?",
+          "options": [
+            {"option": "JavaScript", "isCorrect": true},
+            {"option": "Python", "isCorrect": false},
+            {"option": "Java", "isCorrect": false},
+            {"option": "C++", "isCorrect": false}
+          ]
+        },
+        {
+          "question": "Who wrote 'Romeo and Juliet'?",
+          "options": [
+            {"option": "William Shakespeare", "isCorrect": true},
+            {"option": "Jane Austen", "isCorrect": false},
+            {"option": "Charles Dickens", "isCorrect": false},
+            {"option": "Mark Twain", "isCorrect": false}
+          ]
+        },
+        {
+          "question": "Which country is known as the 'Land of the Rising Sun'?",
+          "options": [
+            {"option": "Japan", "isCorrect": true},
+            {"option": "China", "isCorrect": false},
+            {"option": "South Korea", "isCorrect": false},
+            {"option": "Vietnam", "isCorrect": false}
+          ]
+        },
+        {
+          "question": "Who discovered the theory of general relativity?",
+          "options": [
+            {"option": "Albert Einstein", "isCorrect": true},
+            {"option": "Isaac Newton", "isCorrect": false},
+            {"option": "Galileo Galilei", "isCorrect": false},
+            {"option": "Stephen Hawking", "isCorrect": false}
+          ]
+        },
+        {
+          "question": "What is the powerhouse of the cell?",
+          "options": [
+            {"option": "Mitochondria", "isCorrect": true},
+            {"option": "Nucleus", "isCorrect": false},
+            {"option": "Ribosome", "isCorrect": false},
+            {"option": "Endoplasmic reticulum", "isCorrect": false}
+          ]
+        },
+        {
+          "question": "Who developed the theory of evolution by natural selection?",
+          "options": [
+            {"option": "Charles Darwin", "isCorrect": true},
+            {"option": "Gregor Mendel", "isCorrect": false},
+            {"option": "Louis Pasteur", "isCorrect": false},
+            {"option": "Alexander Fleming", "isCorrect": false}
+          ]
+        },
+        {
+          "question": "Which ocean is the largest?",
+          "options": [
+            {"option": "Pacific Ocean", "isCorrect": true},
+            {"option": "Atlantic Ocean", "isCorrect": false},
+            {"option": "Indian Ocean", "isCorrect": false},
+            {"option": "Arctic Ocean", "isCorrect": false}
+          ]
+        }
+    ]
     const { createUser } = UserAuth();
     const navigate = useNavigate();
 

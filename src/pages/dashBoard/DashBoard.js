@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { UserAuth } from '../../context/AuthContext'
 import { useNavigate } from 'react-router-dom';
-import { QuerySnapshot, collection, doc, onSnapshot, query, where } from 'firebase/firestore';
+import { QuerySnapshot, Timestamp, collection, doc, onSnapshot, query, updateDoc, where } from 'firebase/firestore';
 import { db } from '../../firebase_config';
 
 export default function Dashboard() {
@@ -9,6 +9,8 @@ export default function Dashboard() {
     const [userList, setUserList] = useState('')
     const [question, setQuestion] = useState('')
     const [currentUser, setCurrentUser] = useState('')
+    const [score, setScore] = useState(0)
+    const [quesIndex, setQuesIndex] = useState(0)
     const { user, logout } = UserAuth();
     const navigate = useNavigate();
 
@@ -18,6 +20,29 @@ export default function Dashboard() {
             navigate('/')
         } catch (error) {
             console.log(error.message);
+        }
+    }
+
+
+    const updateScore = async (finalScore) => {
+        const userRef = doc(db, 'users', currentUser.id)
+        await updateDoc(userRef,{
+            highscore:finalScore,
+            timeStamp:Timestamp.now()
+        })
+    }
+    const handleOptions = (e) => {
+        console.log(e.isCorrect);
+        if (quesIndex < (question.length - 1)) {
+            setQuesIndex(quesIndex + 1)
+        } else {
+        }
+
+        if (e.isCorrect) {
+            setScore(score + 1);
+        }
+        else {
+            setScore(score - 1)
         }
     }
 
@@ -45,14 +70,13 @@ export default function Dashboard() {
 
 
     useEffect(() => {
-        const q = query(collection(db, 'section1'))
+        const q = query(collection(db, 'section4'))
         const unsubscribe = onSnapshot(q, (querySnapshot) => {
             let questionArray = []
             querySnapshot.forEach((doc) => {
                 questionArray.push({ ...doc.data(), id: doc.id })
             });
-            setQuestion(questionArray);
-            console.log(questionArray);
+            setQuestion(questionArray[0].data);
         })
         return () => unsubscribe()
     }, [])
@@ -71,41 +95,21 @@ export default function Dashboard() {
                         <button type="button" class="btn btn-primary" onClick={handleLogout}>LogOut</button>
                     </div>
                 </div>}
-
+            <div><input type="button" value="Click" onClick={() => updateScore(10)} /></div>
             <form>
                 <h1>Questions</h1>
+                <h1>Marks = {score}</h1>
                 {question[0] && (
-                    question.map((data) => (
-
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">{data.question}</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked />
-                                <label class="form-check-label" for="exampleRadios1">
-                                    {data.A}
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked />
-                                <label class="form-check-label" for="exampleRadios1">
-                                {data.B}
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked />
-                                <label class="form-check-label" for="exampleRadios1">
-                                    {data.C}
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked />
-                                <label class="form-check-label" for="exampleRadios1">
-                                {data.D}
-                                </label>
-                            </div>
-                        </div>
-
-                    ))
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">{question[quesIndex].question}</label>
+                        {question[quesIndex].options && (
+                            question[quesIndex].options.map((e) => (
+                                <div class="form-check">
+                                    <a onClick={() => handleOptions(e)} href='#'>{e.option}</a>
+                                </div>
+                            ))
+                        )}
+                    </div>
                 )}
 
                 <button type="submit" class="btn btn-primary">Submit</button>
